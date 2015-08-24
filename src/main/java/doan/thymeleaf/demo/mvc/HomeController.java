@@ -35,6 +35,14 @@ public class HomeController
 		return "pages/example1";
 	}
 
+
+	@RequestMapping(value = "/exampleX", method = RequestMethod.GET)
+	public String exampleX(Model model)
+	{
+		model.addAttribute("currentUser", new User("foobar", "Foo", "BAR", ""));
+		return "pages/index1";
+	}
+	
 	@RequestMapping(value = "/example2", method = RequestMethod.GET)
 	public String setupForm(Model model)
 	{
